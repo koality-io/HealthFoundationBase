@@ -1,8 +1,8 @@
 <?php
 
-namespace Koality\HealthFoundation\Result\Format;
+namespace Leankoala\HealthFoundationBase\Result\Format;
 
-use Koality\HealthFoundation\RunResult;
+use Leankoala\HealthFoundationBase\RunResult;
 
 interface Format
 {

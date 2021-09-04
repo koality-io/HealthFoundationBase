@@ -1,11 +1,11 @@
 <?php
 
-namespace Koality\HealthFoundation\test\Check;
+namespace Leankoala\HealthFoundationBase\test\Check;
 
-use Koality\HealthFoundation\Check\Check;
-use Koality\HealthFoundation\Check\CacheAwareCheck;
-use Koality\HealthFoundation\Check\Result;
-use Koality\HealthFoundation\Extenstion\Cache\Cache;
+use Leankoala\HealthFoundationBase\Check\Check;
+use Leankoala\HealthFoundationBase\Check\CacheAwareCheck;
+use Leankoala\HealthFoundationBase\Check\Result;
+use Leankoala\HealthFoundationBase\Extenstion\Cache\Cache;
 
 class ToggleStatusCheck implements Check, CacheAwareCheck
 {

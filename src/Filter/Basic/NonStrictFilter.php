@@ -1,12 +1,12 @@
 <?php
 
-namespace Koality\HealthFoundation\Filter\Basic;
+namespace Leankoala\HealthFoundationBase\Filter\Basic;
 
-use Koality\HealthFoundation\Check\CacheAwareCheck;
-use Koality\HealthFoundation\Check\MetricAwareResult;
-use Koality\HealthFoundation\Check\Result;
-use Koality\HealthFoundation\Filter\BasicFilter;
-use Koality\HealthFoundation\Extenstion\Cache\Cache;
+use Leankoala\HealthFoundationBase\Check\CacheAwareCheck;
+use Leankoala\HealthFoundationBase\Check\MetricAwareResult;
+use Leankoala\HealthFoundationBase\Check\Result;
+use Leankoala\HealthFoundationBase\Filter\BasicFilter;
+use Leankoala\HealthFoundationBase\Extenstion\Cache\Cache;
 
 class NonStrictFilter extends BasicFilter implements CacheAwareCheck
 {

@@ -1,5 +1,5 @@
 {
-  "name": "koality/healthfoundation",
+  "name": "leankoala/healthfoundationbase",
   "description": "A expendable health check framework for PHP",
   "authors": [
     {
@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Koality\\HealthFoundation\\": "src/"
+      "Leankoala\\HealthFoundationBase\\": "src/"
     }
   },
   "suggest": {

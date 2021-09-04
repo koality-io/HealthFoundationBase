@@ -2,18 +2,18 @@
 
 include_once __DIR__ . '/../../../vendor/autoload.php';
 
-$foundation = new \Koality\HealthFoundation\HealthFoundation();
+$foundation = new \Leankoala\HealthFoundationBase\HealthFoundation();
 
-$staticCheck = new \Koality\HealthFoundation\test\Check\StaticStatusCheck();
+$staticCheck = new \Leankoala\HealthFoundationBase\test\Check\StaticStatusCheck();
 
-$nonStrictStaticCheck = new \Koality\HealthFoundation\Filter\Basic\NonStrictFilter();
+$nonStrictStaticCheck = new \Leankoala\HealthFoundationBase\Filter\Basic\NonStrictFilter();
 $nonStrictStaticCheck->setCheck($staticCheck);
 
 $foundation->registerCheck($nonStrictStaticCheck, null, 'Test non-strict mode for static check.');
 
 $runResult = $foundation->runHealthCheck();
 
-$formatter = new \Koality\HealthFoundation\Result\Format\Ietf\IetfFormat(
+$formatter = new \Leankoala\HealthFoundationBase\Result\Format\Ietf\IetfFormat(
     'pass',
     'fail'
 );

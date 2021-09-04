@@ -1,8 +1,8 @@
 <?php
 
-namespace Koality\HealthFoundation\Filter;
+namespace Leankoala\HealthFoundationBase\Filter;
 
-use Koality\HealthFoundation\Check\Check;
+use Leankoala\HealthFoundationBase\Check\Check;
 
 abstract class BasicFilter implements Filter
 {

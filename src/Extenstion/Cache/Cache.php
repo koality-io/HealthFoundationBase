@@ -1,6 +1,6 @@
 <?php
 
-namespace Koality\HealthFoundation\Extenstion\Cache;
+namespace Leankoala\HealthFoundationBase\Extenstion\Cache;
 
 class Cache
 {

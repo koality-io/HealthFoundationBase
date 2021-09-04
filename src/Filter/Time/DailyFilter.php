@@ -1,10 +1,10 @@
 <?php
 
-namespace Koality\HealthFoundation\Filter\Time;
+namespace Leankoala\HealthFoundationBase\Filter\Time;
 
-use Koality\HealthFoundation\Check\MetricAwareResult;
-use Koality\HealthFoundation\Check\Result;
-use Koality\HealthFoundation\Filter\BasicFilter;
+use Leankoala\HealthFoundationBase\Check\MetricAwareResult;
+use Leankoala\HealthFoundationBase\Check\Result;
+use Leankoala\HealthFoundationBase\Filter\BasicFilter;
 
 class DailyFilter extends BasicFilter
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Koality\HealthFoundation;
+namespace Leankoala\HealthFoundationBase;
 
 use GuzzleHttp\Client;
-use Koality\HealthFoundation\Check\Check;
-use Koality\HealthFoundation\Check\HttpClientAwareCheck;
-use Koality\HealthFoundation\Check\CacheAwareCheck;
-use Koality\HealthFoundation\Extenstion\Cache\Cache;
+use Leankoala\HealthFoundationBase\Check\Check;
+use Leankoala\HealthFoundationBase\Check\HttpClientAwareCheck;
+use Leankoala\HealthFoundationBase\Check\CacheAwareCheck;
+use Leankoala\HealthFoundationBase\Extenstion\Cache\Cache;
 
 class HealthFoundation
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Koality\HealthFoundation;
+namespace Leankoala\HealthFoundationBase;
 
-use Koality\HealthFoundation\Check\Check;
-use Koality\HealthFoundation\Check\Result;
+use Leankoala\HealthFoundationBase\Check\Check;
+use Leankoala\HealthFoundationBase\Check\Result;
 
 class RunResult
 {

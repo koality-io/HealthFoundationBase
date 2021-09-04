@@ -1,12 +1,12 @@
 <?php
 
-namespace Koality\HealthFoundation\Result\Format\Koality;
+namespace Leankoala\HealthFoundationBase\Result\Format\Koality;
 
-use Koality\HealthFoundation\Check\Check;
-use Koality\HealthFoundation\Check\MetricAwareResult;
-use Koality\HealthFoundation\Check\Result;
-use Koality\HealthFoundation\Result\Format\Format;
-use Koality\HealthFoundation\RunResult;
+use Leankoala\HealthFoundationBase\Check\Check;
+use Leankoala\HealthFoundationBase\Check\MetricAwareResult;
+use Leankoala\HealthFoundationBase\Check\Result;
+use Leankoala\HealthFoundationBase\Result\Format\Format;
+use Leankoala\HealthFoundationBase\RunResult;
 
 class KoalityFormat implements Format
 {
