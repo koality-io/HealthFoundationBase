@@ -37,6 +37,8 @@ class Result
 
     const KOALITY_IDENTIFIER_SERVER_DICS_SPACE_USED = 'server.space.used';
 
+    const ATTRIBUTE_ACTION_URL = "actions";
+
     /**
      * @var string
      */
@@ -92,6 +94,42 @@ class Result
     }
 
     /**
+     * Add a new attribute to an array.
+     *
+     * @param string $key
+     * @param mixed $value
+     */
+    public function addArrayAttribute($key, $value)
+    {
+        if ($this->hasAttribute($key)) {
+            $resultValue = [];
+            $existingValues = $this->getAttribute($key);
+            if (is_array($existingValues)) {
+                $resultValue = $existingValues;
+                $resultValue[] = $value;
+            } else {
+                $resultValue[] = $existingValues;
+                $resultValue[] = $value;
+            }
+        } else {
+            $resultValue[] = $value;
+        }
+
+        $this->addAttribute($key, $resultValue);
+    }
+
+    /**
+     * Check if the attribute already exists
+     *
+     * @param $key
+     * @return bool
+     */
+    public function hasAttribute($key)
+    {
+        return array_key_exists($key, $this->attributes);
+    }
+
+    /**
      * Return a list of attribute
      *
      * @return array
@@ -99,6 +137,22 @@ class Result
     public function getAttributes()
     {
         return $this->attributes;
+    }
+
+    /**
+     * Return the attribute for the given key.
+     *
+     * @param string $key
+     *
+     * @return mixed
+     */
+    public function getAttribute($key)
+    {
+        if ($this->hasAttribute($key)) {
+            return $this->attributes[$key];
+        } else {
+            throw new \RuntimeException('No attribute for key "' . $key . '" found.');
+        }
     }
 
     /**
