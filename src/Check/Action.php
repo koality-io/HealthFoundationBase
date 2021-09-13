@@ -20,6 +20,8 @@ class Action
     private $url;
     private $type;
 
+    private $identifier;
+
     /**
      * @param $label
      * @param $url
@@ -32,12 +34,26 @@ class Action
         $this->type = $type;
     }
 
+    /**
+     * @param string $identifier
+     */
+    public function setIdentifier($identifier)
+    {
+        $this->identifier = $identifier;
+    }
+
     public function asArray()
     {
-        return [
+        $array = [
             'type' => $this->type,
             'label' => $this->label,
             'url' => $this->url
         ];
+
+        if ($this->identifier) {
+            $array['identifier'] = $this->identifier;
+        }
+
+        return $array;
     }
 }
