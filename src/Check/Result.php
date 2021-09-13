@@ -119,6 +119,16 @@ class Result
     }
 
     /**
+     * Add an action to the result.
+     *
+     * @param Action $action
+     */
+    public function addAction(Action $action)
+    {
+        $this->addArrayAttribute(self::ATTRIBUTE_ACTION_URL, $action->asArray());
+    }
+
+    /**
      * Check if the attribute already exists
      *
      * @param $key
