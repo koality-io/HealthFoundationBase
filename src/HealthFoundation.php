@@ -3,9 +3,9 @@
 namespace Leankoala\HealthFoundationBase;
 
 use GuzzleHttp\Client;
+use Leankoala\HealthFoundationBase\Check\CacheAwareCheck;
 use Leankoala\HealthFoundationBase\Check\Check;
 use Leankoala\HealthFoundationBase\Check\HttpClientAwareCheck;
-use Leankoala\HealthFoundationBase\Check\CacheAwareCheck;
 use Leankoala\HealthFoundationBase\Extenstion\Cache\Cache;
 
 class HealthFoundation
@@ -79,7 +79,10 @@ class HealthFoundation
             $group = $checkInfos['group'];
 
             $checkResult = $check->run();
-            $runResult->addResult($check, $checkResult, $identifier, $checkInfos['description'], $group);
+
+            if ($checkResult) {
+                $runResult->addResult($check, $checkResult, $identifier, $checkInfos['description'], $group);
+            }
         }
 
         return $runResult;
