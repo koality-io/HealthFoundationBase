@@ -20,6 +20,8 @@ class Action
     private $url;
     private $type;
 
+    private $group;
+
     private $identifier;
 
     /**
@@ -42,6 +44,22 @@ class Action
         $this->identifier = $identifier;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
+
+    /**
+     * @param mixed $group
+     */
+    public function setGroup($group)
+    {
+        $this->group = $group;
+    }
+
     public function asArray()
     {
         $array = [
@@ -52,6 +70,10 @@ class Action
 
         if ($this->identifier) {
             $array['identifier'] = $this->identifier;
+        }
+
+        if ($this->group) {
+            $array['group'] = $this->group;
         }
 
         return $array;
